@@ -1,2 +1,7 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<h1>Products Index</h1>
+<%= link_to "New Product", "/products/new" %>
+
+<% @products.each do |product| %>
+  <p><b><%= product.name.capitalize %></b> - <%= product.description.capitalize %></p>
+  <p><%= product.price_in_cents %> Cents</p>
+<% end %>
