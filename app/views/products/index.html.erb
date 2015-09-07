@@ -3,5 +3,5 @@
 
 <% @products.each do |product| %>
   <p><b><%= product.name.capitalize %></b> - <%= product.description.capitalize %></p>
-  <p><%= product.price_in_cents %> Cents</p>
+  <p>$ <%= product.formatted_price %></p>
 <% end %>
